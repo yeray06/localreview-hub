@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Crear cuenta · LocalReview Hub</title>
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+  <!-- CABECERA -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">LocalReview<span>Hub</span></div>
+      <nav>
+        <a href="index.html" class="btn-link">Inicio</a>
+        <a href="login.html" class="btn-primary">Iniciar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO REGISTRO -->
+  <main class="auth-main">
+    <div class="container auth-layout">
+      <!-- Texto explicativo -->
+      <section class="auth-intro">
+        <h1>Crea tu cuenta y conecta tu negocio.</h1>
+        <p>
+          Configura tu acceso y registra la información básica de tu negocio
+          para empezar a gestionar reseñas desde un panel sencillo.
+        </p>
+        <p class="auth-highlight">
+          Pensado para pequeños negocios que quieren entender qué opinan 
+          sus clientes sin complicaciones técnicas.
+        </p>
+      </section>
+
+      <!-- Tarjeta con el formulario -->
+      <section class="auth-card">
+        <h2>Registro</h2>
+        <p>Completa tus datos personales y los de tu negocio.</p>
+
+        <form id="register-form" action="#" method="post">
+          <!-- Datos de usuario -->
+          <div class="form-group">
+            <label for="user-name">Tu nombre</label>
+            <input
+              type="text"
+              id="user-name"
+              name="name"
+              class="form-control"
+              placeholder="Nombre y apellidos"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="user-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="user-email"
+              name="email"
+              class="form-control"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="user-password">Contraseña</label>
+            <input
+              type="password"
+              id="user-password"
+              name="password"
+              class="form-control"
+              placeholder="Mínimo 8 caracteres"
+              required
+            />
+          </div>
+
+          <!-- Datos del negocio -->
+          <div class="form-group">
+            <label for="business-name">Nombre del negocio</label>
+            <input
+              type="text"
+              id="business-name"
+              name="business_name"
+              class="form-control"
+              placeholder="Ej. Pizzería La Plaza"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="business-category">Categoría</label>
+            <input
+              type="text"
+              id="business-category"
+              name="business_category"
+              class="form-control"
+              placeholder="Restaurante, peluquería, taller..."
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="business-address">Dirección</label>
+            <input
+              type="text"
+              id="business-address"
+              name="business_address"
+              class="form-control"
+              placeholder="Calle, nº, ciudad"
+            />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Crear cuenta</button>
+            <p class="form-note">
+              ¿Ya tienes cuenta?
+              <a href="login.html">Iniciar sesión</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>LocalReview Hub · Proyecto Yeray Sanchez Roldan</p>
+    </div>
+  </footer>
+  
+  <script src="js/auth.js"></script>
+</body>
+</html>

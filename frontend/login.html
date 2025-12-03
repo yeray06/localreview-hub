@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Iniciar sesión · LocalReview Hub</title>
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+  <!-- CABECERA (reutilizamos la del index) -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">LocalReview<span>Hub</span></div>
+      <nav>
+        <a href="index.html" class="btn-link">Inicio</a>
+        <a href="register.html" class="btn-primary">Registrarse</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO LOGIN -->
+  <main class="auth-main">
+    <div class="container auth-layout">
+      <!-- Texto explicativo -->
+      <section class="auth-intro">
+        <h1>Accede a tu panel de reseñas.</h1>
+        <p>
+          Inicia sesión para ver las opiniones de tus clientes, filtrar por puntuación 
+          y revisar la reputación de tu negocio en tiempo real.
+        </p>
+        <p class="auth-highlight">
+          Este proyecto forma parte de un sistema de gestión de reseñas para pequeños negocios,
+          desarrollado en HTML, CSS, JavaScript y SQL.
+        </p>
+      </section>
+
+      <!-- Tarjeta con el formulario -->
+      <section class="auth-card">
+        <h2>Iniciar sesión</h2>
+        <p>Introduce tus datos para entrar en tu cuenta.</p>
+
+        <!-- De momento el formulario no envía a ningún sitio real (action="#").
+             Más adelante lo conectaremos con JavaScript/backend. -->
+        <form id="login-form" action="#" method="post">
+          <div class="form-group">
+            <label for="login-email">Correo electrónico</label>
+            <input
+              type="email"
+              id="login-email"
+              name="email"
+              class="form-control"
+              placeholder="tucorreo@ejemplo.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="login-password">Contraseña</label>
+            <input
+              type="password"
+              id="login-password"
+              name="password"
+              class="form-control"
+              placeholder="Tu contraseña"
+              required
+            />
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">Entrar</button>
+            <p class="form-note">
+              ¿No tienes cuenta?
+              <a href="register.html">Crear cuenta</a>
+            </p>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <!-- PIE -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>LocalReview Hub · Proyecto Yeray Sanchez Roldan</p>
+    </div>
+  </footer>
+
+  <script src="js/auth.js"></script>
+</body>
+</html>

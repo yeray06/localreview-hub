@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Panel de reseñas · LocalReview Hub</title>
+
+  <!-- CSS global -->
+  <link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-content">
+      <div class="logo">LocalReview<span>Hub</span></div>
+      <nav>
+        <a href="index.html" class="btn-link">Inicio</a>
+        <a href="login.html" class="btn-secondary">Cerrar sesión</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- CONTENIDO PRINCIPAL -->
+  <main class="dashboard-main">
+    <div class="container dashboard-layout">
+
+      <!-- CABECERA DEL PANEL -->
+      <section class="dashboard-header">
+        <div>
+          <h1>Panel de reseñas</h1>
+          <p class="dashboard-subtitle">
+            Visualiza y gestiona las opiniones de tus clientes en tiempo real.
+          </p>
+        </div>
+        <div class="dashboard-business">
+          <span class="business-label">Negocio:</span>
+          <span class="business-name">Pizzería La Plaza</span>
+          <!-- Luego vendrá de la BD -->
+        </div>
+      </section>
+
+      <!-- MÉTRICAS -->
+      <section class="dashboard-metrics">
+        <article class="metric-card">
+          <h2>Puntuación media</h2>
+          <p class="metric-number avg">0 ★</p>
+          <p class="metric-detail">Media basada en las reseñas.</p>
+        </article>
+
+        <article class="metric-card">
+          <h2>Reseñas totales</h2>
+          <p class="metric-number total">0</p>
+          <p class="metric-detail">Número total de valoraciones.</p>
+        </article>
+
+        <article class="metric-card">
+          <h2>Reseñas positivas</h2>
+          <p class="metric-number positive">0%</p>
+          <p class="metric-detail">Porcentaje de 4 y 5 estrellas.</p>
+        </article>
+      </section>
+
+      <!-- CONTROLES -->
+      <section class="dashboard-controls">
+        <div class="filter-group">
+          <label for="rating-filter">Filtrar por puntuación mínima:</label>
+          <select id="rating-filter" class="form-control">
+            <option value="0">Todas las reseñas</option>
+            <option value="1">Desde 1 estrella</option>
+            <option value="2">Desde 2 estrellas</option>
+            <option value="3">Desde 3 estrellas</option>
+            <option value="4">Desde 4 estrellas</option>
+            <option value="5">Solo 5 estrellas</option>
+          </select>
+        </div>
+
+        <button type="button" class="btn-primary" id="btn-new-review">
+          Añadir reseña
+        </button>
+      </section>
+
+      <!-- TABLA DE RESEÑAS -->
+      <section class="dashboard-reviews">
+        <h2>Reseñas recientes</h2>
+
+        <div class="table-wrapper">
+          <table class="reviews-table">
+            <thead>
+              <tr>
+                <th>Cliente</th>
+                <th>Puntuación</th>
+                <th>Comentario</th>
+                <th>Fecha</th>
+                <th>Estado</th>
+              </tr>
+            </thead>
+            <tbody>
+              <!-- Aquí JavaScript insertará las reseñas -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container">
+      <p>LocalReview Hub · Proyecto DAW</p>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="js/api.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
